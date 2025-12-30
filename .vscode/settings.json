@@ -1,0 +1,27 @@
+{
+  // Cursor AI 인라인 자동완성 비활성화 (뿌연 글씨로 뜨는 것)
+  "editor.inlineSuggest.enabled": false,
+  // Cursor Tab 완전 비활성화
+  "cursor.general.enableCursorTab": false,
+  // Cursor AI 기능 비활성화
+  "cursor.ai.enabled": false,
+  "cursor.ai.autocomplete": false,
+  // GitHub Copilot 비활성화
+  "github.copilot.enable": {
+    "*": false
+  },
+  "github.copilot.editor.enableAutoCompletions": false,
+  // 인라인 제안 완전 비활성화
+  "editor.inlineSuggest.showToolbar": "never",
+  "editor.inlineSuggest.suppressSuggestions": true,
+  // 모든 언어에 대해 인라인 제안 비활성화
+  "[javascript]": {
+    "editor.inlineSuggest.enabled": false
+  },
+  "[python]": {
+    "editor.inlineSuggest.enabled": false
+  },
+  "[typescript]": {
+    "editor.inlineSuggest.enabled": false
+  }
+}
