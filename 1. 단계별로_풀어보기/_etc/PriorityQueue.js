@@ -51,10 +51,13 @@ class PriorityQueue {
 
   push(val) {
     if (this.heapLen === this.maxLen) {
-      return false
+      this.heapArr.push(val)
+      this.heapLen++
+      this.maxLen++
+    } // ::
+    else {
+      this.heapArr[this.heapLen++] = val
     }
-
-    this.heapArr[this.heapLen++] = val
 
     let nowIdx = this.heapLen - 1
 
@@ -73,6 +76,15 @@ class PriorityQueue {
       nowIdx = parentIdx
     }
     return true
+  }
+
+  /**
+   * 다른 테스트 케이스에 대해 우선순위큐를 사용할때를 위해 작성
+   * 테스트 케이스마다 우선순위큐를 선언하면 메모리 초과가 발생할 수 있음
+   */
+  resetQueue() {
+    this.heapArr.fill(null)
+    this.heapLen = 0
   }
 
   size() {
